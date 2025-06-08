@@ -1,0 +1,7 @@
+---
+channel: stable
+addons:
+  adguard:
+    repository: aquaminer/hassio-telegraf
+    target: telegraf
+    image: ghcr.io/aqmainer/hassio-telegraf/{arch}

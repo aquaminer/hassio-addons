@@ -6,8 +6,17 @@ on:
   repository_dispatch:
     types: ["update"]
 
+concurrency:
+  group: queue
+
 jobs:
-  workflows:
-    uses: hassio-addons/workflows/.github/workflows/repository-updater.yaml@main
-    secrets:
-      UPDATER_TOKEN: ${{ secrets.UPDATER_TOKEN }}
+  publish:
+    name: Publish add-on update
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚀 Run Repository Updater
+        uses: killer0071234/repository-updater@b2817b0c1f77c2c2449536689eb4b100cad1a2e6
+        with:
+          addon: ${{ github.event.client_payload.addon }}
+          repository: ${{ github.repository }}
+          token: ${{ secrets.UPDATER_TOKEN }}

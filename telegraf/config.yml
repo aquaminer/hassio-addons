@@ -1,7 +1,7 @@
 ---
 name: Telegraf
 slug: telegraf
-version: 0.1.0
+version: dev
 description: Telegraf open source data collector
 url: https://github.com/aquaminer/hassio-telegraf
 arch:

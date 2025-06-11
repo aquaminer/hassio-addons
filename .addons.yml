@@ -1,7 +1,7 @@
 ---
 channel: stable
 addons:
-  telegraf:
+  hassio-telegraf:
     repository: aquaminer/hassio-telegraf
     target: telegraf
     image: ghcr.io/aquaminer/hassio-telegraf/{arch}

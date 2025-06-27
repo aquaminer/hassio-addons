@@ -1,3 +1,3 @@
 ## What’s changed
 
-* No changes
+* added nvme-cli dependency (for telegraf inputs.smart)
